@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lhp-JZ-mIL">
+                                <rect key="frame" x="276" y="336" width="51" height="31"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="E9J-pM-88j"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-2.5" maxValue="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fmn-AY-r7e">
+                                <rect key="frame" x="198" y="284" width="204" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8HI-B1-Xuv"/>
+                                    <constraint firstAttribute="width" constant="200" id="PJP-09-7ge"/>
+                                </constraints>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-2.5" maxValue="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="EdW-cE-fw0">
+                                <rect key="frame" x="198" y="232" width="204" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BBk-sc-51g"/>
+                                    <constraint firstAttribute="width" constant="200" id="LlE-tB-OUg"/>
+                                </constraints>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lhp-JZ-mIL" secondAttribute="bottom" constant="285" id="2hF-hO-ygU"/>
+                            <constraint firstAttribute="centerX" secondItem="EdW-cE-fw0" secondAttribute="centerX" id="BhZ-BF-Mxc"/>
+                            <constraint firstAttribute="centerX" secondItem="Fmn-AY-r7e" secondAttribute="centerX" id="CZO-yF-mov"/>
+                            <constraint firstAttribute="centerX" secondItem="EdW-cE-fw0" secondAttribute="centerX" constant="-160" id="H2F-7a-iMB"/>
+                            <constraint firstAttribute="centerX" secondItem="Fmn-AY-r7e" secondAttribute="centerX" constant="154" id="HQs-v1-3T6"/>
+                            <constraint firstItem="lhp-JZ-mIL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="264" id="P3N-qq-CsM"/>
+                            <constraint firstAttribute="centerY" secondItem="EdW-cE-fw0" secondAttribute="centerY" constant="53" id="Rot-vS-Amk"/>
+                            <constraint firstAttribute="centerY" secondItem="Fmn-AY-r7e" secondAttribute="centerY" constant="1" id="W7F-md-gJd"/>
+                            <constraint firstAttribute="centerY" secondItem="lhp-JZ-mIL" secondAttribute="centerY" constant="-51.5" id="YRU-yw-PuF"/>
+                            <constraint firstAttribute="centerX" secondItem="lhp-JZ-mIL" secondAttribute="centerX" id="ZNM-d8-WsF"/>
+                            <constraint firstAttribute="trailing" secondItem="lhp-JZ-mIL" secondAttribute="trailing" constant="275" id="az3-Dx-5MD"/>
+                            <constraint firstItem="lhp-JZ-mIL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="276" id="c7N-NE-w41"/>
+                            <constraint firstAttribute="centerY" secondItem="EdW-cE-fw0" secondAttribute="centerY" id="e60-D7-acH"/>
+                            <constraint firstAttribute="centerY" secondItem="Fmn-AY-r7e" secondAttribute="centerY" id="taH-Bx-iXD"/>
+                            <constraint firstAttribute="centerY" secondItem="lhp-JZ-mIL" secondAttribute="centerY" id="y4g-Ka-4Br"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="H2F-7a-iMB"/>
+                                <exclude reference="e60-D7-acH"/>
+                                <exclude reference="HQs-v1-3T6"/>
+                                <exclude reference="taH-Bx-iXD"/>
+                                <exclude reference="P3N-qq-CsM"/>
+                                <exclude reference="az3-Dx-5MD"/>
+                                <exclude reference="c7N-NE-w41"/>
+                                <exclude reference="y4g-Ka-4Br"/>
+                                <exclude reference="2hF-hO-ygU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pitchSlider" destination="EdW-cE-fw0" id="xwV-aJ-3cI"/>
+                        <outlet property="rollSlider" destination="Fmn-AY-r7e" id="od5-q2-p3S"/>
+                        <outlet property="switchView" destination="lhp-JZ-mIL" id="vhN-uK-gY0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
